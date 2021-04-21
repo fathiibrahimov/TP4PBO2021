@@ -17,7 +17,6 @@ $otask->open();
 
 if(!empty($_POST)){
 	$otask->addData();
-	echo "post";
 }
 
 if (isset($_GET['id_hapus'])){
