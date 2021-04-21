@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>To Do List</title>
+</head>
+
+<body class="bg-dark text-white">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">Peminjaman Buku</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div class="container" style="margin-left: 10%;">
+    <form action="index.php" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tname">Judul Buku</label>
+          <input type="text" class="form-control" name="tname" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdate">Tanggal Peminjaman</label>
+          <input class="form-control" type="date" name="tdate" name="tdate" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdetail">Nama Peminjam</label>
+          <input type="text" class="form-control" name="tdetails" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tsubject">Genre Buku</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject1" value="Komedi" />
+              <label class="form-check-label" for="tsubject1">Komedi</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject2" value="Drama" />
+              <label class="form-check-label" for="tsubject2">Drama</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject3" value="Horror" />
+              <label class="form-check-label" for="tsubject3">Horror</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject4" value="Misteri" />
+              <label class="form-check-label" for="tsubject4">Misteri</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject5" value="Romantis" />
+              <label class="form-check-label" for="tsubject4">Romantis</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tpriority">Lama Peminjaman</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpriority" id="tpriority1" value="1" />
+              <label class="form-check-label" for="tpriority1">Satu Hari</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpriority" id="tpriority2" value="2" />
+              <label class="form-check-label" for="tpriority2">Dua Hari</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpriority" id="tpriority3" value="3" />
+              <label class="form-check-label" for="tpriority3">Tiga Hari</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpriority" id="tpriority4" value="4" />
+              <label class="form-check-label" for="tpriority4">Empat Hari</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tpriority" id="tpriority5" value="5" />
+              <label class="form-check-label" for="tpriority5">Lima Hari</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" name="add" class="btn btn-primary">Add</button>
+    </form>
+
+    <!-- Tabel 1 - Task -->
+    <div style="display: inline-block; ">
+      <h3>TO DO</h3>
+      <!-- TABEL1 -->
+      <table align="left" border="1" style="text-align: center;">
+        <tr>
+          <td>No</td>
+          <td>Judul Buku</td>
+          <td>Tanggal Peminjaman</td>
+          <td>Nama Peminjam</td>
+          <td>Genre Buku</td>
+          <td>Lama Peminjaman</td>
+          <td>Status Peminjaman</td>
+          <td>Aksi</td>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
